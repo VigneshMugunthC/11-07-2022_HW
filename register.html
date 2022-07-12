@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home Work 11-07</title>
+    </head>
+    <body>
+        <header><h1 style="text-align:center">REGISTER PAGE</h1></header>
+        <hr>
+        <form align="center" action="login.html" method="post">
+            <h3>
+                Username: <input type="text" name="t1" required><br>
+                Password: &nbsp;<input type="password" name="t2" required minlength="4" maxlength="8"><br>
+                Confirm: &nbsp;&nbsp;&nbsp;<input type="password" name="t3" required minlength="4" maxlength="8"><br><br>
+                <label>Age</label><br><input required type="number" min="21" max="75" name="t4"><br><br>
+                <label>Qualification</label><br>
+                <select name="t5">
+                    <option>BE</option>
+                    <option>ME</option>
+                    <option>BTech</option>
+                    <option>MTech</option>
+                    <option>MCA</option>
+                    <option>MBA</option>
+                </select><br><br>
+                <label>Date of Birth</label><br><input type="date" required name="t6"><br><br>
+                <label>Gender</label><br><input checked type="radio" name="t7" value="male"><label> Male </label><input type="radio" name="t7" value="female"><label> Female </label><br><br>
+                <input type="checkbox" name="t8"><label>Married</label>
+                <br><br>
+                <input type="submit" value="REGISTER">
+                <input type="reset" value="CLEAR">
+            </h3>
+        </form>
+        <hr>
+        <footer align="center">@Register Page</footer>
+    </body>
+</html>
