@@ -3,11 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <title>Home Work 11-07</title>
+        <style>
+            input.register{
+                background-color: #4CAF50; 
+                border: none;
+                color: white;
+                padding: 15px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            input.clear{
+                background-color: #AF0200; 
+                border: none;
+                color: white;
+                padding: 15px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 14px;
+            }
+        </style>
     </head>
     <body>
         <header><h1 style="text-align:center">REGISTER PAGE</h1></header>
         <hr>
-        <form align="center" action="login.html" method="post">
+        <form style="margin-left: 45%;margin-right: 40%; " action="login.html" method="post">
             <h3>
                 Username: <input type="text" name="t1" required><br>
                 Password: &nbsp;<input type="password" name="t2" required minlength="4" maxlength="8"><br>
@@ -26,11 +46,11 @@
                 <label>Gender</label><br><input checked type="radio" name="t7" value="male"><label> Male </label><input type="radio" name="t7" value="female"><label> Female </label><br><br>
                 <input type="checkbox" name="t8"><label>Married</label>
                 <br><br>
-                <input type="submit" value="REGISTER">
-                <input type="reset" value="CLEAR">
+                <input class="register" type="submit" value="REGISTER">
+                <input class="clear" type="reset" value="CLEAR">
             </h3>
         </form>
         <hr>
-        <footer align="center">@Register Page</footer>
+        <footer style="text-align: center">@Register Page</footer>
     </body>
 </html>

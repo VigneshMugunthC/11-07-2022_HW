@@ -3,22 +3,43 @@
     <head>
         <meta charset="UTF-8">
         <title>Home Work 11-07</title>
+        <style>
+            input.login{
+                background-color: #4CAF50; 
+                border: none;
+                color: white;
+                padding: 15px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            
+            input.clear{
+                background-color: #AF0200; 
+                border: none;
+                color: white;
+                padding: 15px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 14px;
+            }
+        </style>
     </head>
     <body>
         <header><h1 style="text-align:center">LOGIN</h1></header>
         <hr>
-        <h2 align="center">Please Login</h2><br>
-        <form align="center" action="welcome.html" method="post">
+        <h2 style="text-align: center">Please Login</h2><br>
+        <form style="margin-left: 45%;margin-right: 42%; " action="welcome.html" method="post">
             <h3>
                 Username: <input type="text" name="t1" required><br>
                 Password: &nbsp;<input type="password" name="t2" required minlength="4" maxlength="8"><br>
                 <br><br>
-                <input type="submit" value="LOGIN">
-                <input type="reset" value="CLEAR">
+                <input class="login" type="submit" value="LOGIN">
+                <input class="clear" type="reset" value="CLEAR">
             </h3>
         </form>
-        <h4 align="right"><a href="register.html">Sign Up</a></h4>
+        <h4 style="text-align: right;"><a style="background-color:darkslategrey; border: none; color: white; padding: 15px 20px; text-align: center; text-decoration: none; font-size: 14px;" href="register.html">SIGN UP</a></h4>
         <hr>
-        <footer align="center">@Login Page</footer>
+        <footer style="text-align: center">@Login Page</footer>
     </body>
 </html>
