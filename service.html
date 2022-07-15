@@ -3,10 +3,66 @@
     <head>
         <meta charset="UTF-8">
         <title>Home Work 11-07</title>
+        <script>
+            function change_roi(){
+                if(document.getElementById("_type").value === "HOME")
+                {
+                    document.getElementById("_roi").value = "7%";
+                    document.getElementById("_duration").value = 1;
+                    document.getElementById("_duration").max = 25;
+                    document.getElementById("_ammount").value = 1000000;
+                    document.getElementById("_ammount").min = 1000000;
+                }
+                if(document.getElementById("_type").value === "CAR")
+                {
+                    document.getElementById("_roi").value = "9%";
+                    document.getElementById("_duration").value = 1;
+                    document.getElementById("_duration").max = 7;
+                    document.getElementById("_ammount").value = 100000;
+                    document.getElementById("_ammount").min = 100000;
+                }
+                if(document.getElementById("_type").value === "PERSONAL")
+                {
+                    document.getElementById("_roi").value = "12%";
+                    document.getElementById("_duration").value = 1;
+                    document.getElementById("_duration").max = 5;
+                    document.getElementById("_ammount").value = 10000;
+                    document.getElementById("_ammount").min = 10000;
+                }
+                calculate_emi();
+            }
+            //E = P x r x ( 1 + r )^n / ( ( 1 + r )^n - 1 ) 
+            function calculate_emi(){
+                var p,r,n;
+                p = parseInt(document.getElementById("_ammount").value);
+                if(document.getElementById("_roi").value === "7%")
+                    r = 7;
+                if(document.getElementById("_roi").value === "9%")
+                    r = 9;
+                if(document.getElementById("_roi").value === "12%")
+                    r = 12;
+                n=parseInt(document.getElementById("_duration").value);
+                var emi = p*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+                document.getElementById("_emi").value = "Rs."+emi;
+            }
+        </script>
     </head>
     <body>
         <header><h1 style="text-align:center">SERVICE PAGE</h1></header>
         <hr>
+            <h2>Calculate EMI</h2>
+            <h3>
+                Applicant Name: <input type="text" id="_name" minlength="3" maxlength="25"><br><br>
+                Type: <select id="_type" onchange="change_roi()">
+                    <option value="HOME">HOME</option>
+                    <option value="CAR">CAR</option>
+                    <option value="PERSONAL">PERSONAL</option>
+                </select><br><br>
+                Ammount: <input type="number" id="_ammount" min="1000000" value="1000000" onchange="calculate_emi()"><br><br>
+                ROI: <input type="text" disabled id="_roi" value="7%"><br><br>
+                Duration(YEARS): <input type="number" id="_duration" min="1" max="25" value="1" onchange="calculate_emi()"><br><br>
+                EMI: <input type="text" id="_emi" disabled value=""><br><br>
+            </h3>
         <hr>
         <footer style="text-align: center">@Service Page</footer>
     </body>
