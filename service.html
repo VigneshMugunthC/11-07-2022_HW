@@ -42,7 +42,7 @@
                 if(document.getElementById("_roi").value === "12%")
                     r = 12;
                 n=parseInt(document.getElementById("_duration").value);
-                var emi = p*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+                var emi = (p*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
                 document.getElementById("_emi").value = "Rs."+emi;
             }
         </script>
